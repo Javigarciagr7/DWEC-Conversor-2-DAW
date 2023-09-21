@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+</head>
+<body>
+    <h1>Conversor de Temperatura:</h1>
+    <h3>Introduzca la temperatura en grados Celsius</h3>
+    <input type="number" id="TC" placeholder="Temperatura en Celsius">
+    <button onclick="ConvertirTemperatura()">Convertir temperatura</button>
+    <p id="resultado">La temperatura en grados Fahrenheit es:</p>
+
+    <script>
+        function ConvertirTemperatura() {
+            // Obtener el valor ingresado en el input de Celsius
+            var celsius = parseFloat(document.getElementById("TC").value);
+
+            // Realizar la conversión a Fahrenheit
+            var fahrenheit = (celsius * 9/5) + 32;
+
+            // Mostrar el resultado en un mensaje
+            var mensaje = "La temperatura en grados Fahrenheit es: " + fahrenheit.toFixed(2) + " °F";
+            document.getElementById("resultado").textContent = mensaje;
+        }
+    </script>
+    <br>
+    <a href="Inicio.html">Ir a Inicio</a>
+</body>
+</html>
